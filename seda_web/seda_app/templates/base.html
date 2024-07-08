@@ -1,8 +1,15 @@
-<!-- myapp/templates/myapp/post_list.html -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SEDA Africa</title>
+    <meta charset="UTF-8">
+    <title>{% block title %}SEDA Africa{% endblock %}</title>
+    <!-- Load static files -->
+    {% load static %}
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </head>
 <body>
     <h1>Hello world from Django</h1>
