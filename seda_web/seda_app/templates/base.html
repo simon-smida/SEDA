@@ -1,17 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>{% block title %}SEDA Africa{% endblock %}</title>
     <!-- Load static files -->
     {% load static %}
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-</head>
-<body>
-    <h1>Hello world from Django</h1>
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="01-Landing-page">
+        {% include "01-landing-page.html" %}
+      </section>
+      <section class="02-About-us">{% include "02-About-us-1.html" %}</section>
+      <section class="03-About-us">{% include "03-About-us-2.html" %}</section>
+      <section class="04-Success-drivers">
+        {% include "04-Success-drivers.html" %}
+      </section>
+      <section class="05-Explore-projects">
+        {% include "05-Explore-projects.html" %}
+      </section>
+      <section class="06-Our-products">
+        {% include "06-Our-products.html" %}
+      </section>
+      <section class="07-References">
+        {% include "07-References.html" %}
+      </section>
+      <section class="08-Partners">
+        {% include "08-Partners.html" %}
+      </section>
+      <section class="09-Team">
+        {% include "09-Team.html" %}
+      </section>
+      <section class="10-Contact-form">
+        {% include "10-Contact-form.html" %}
+      </section>
+      <section class="11-Contact">
+        {% include "11-Contact.html" %}
+      </section>
+    </main>
+
+    <footer>
+      {% include "footer.html" %}
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+  </body>
 </html>
