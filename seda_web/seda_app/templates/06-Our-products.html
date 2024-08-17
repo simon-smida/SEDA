@@ -161,11 +161,171 @@
             </defs>
           </svg>
         </div>
-        <p>Green <br> Energy</p>
+        <p>
+          Green <br />
+          Energy
+        </p>
       </div>
     </div>
   </div>
-  <div class="d-flex align-items-center 06-Our-products-card-wrappper">
+
+  <div class="06-Products-list">
+    <div class="06-products-slider">
+      <div class="left-arrow">
+        <svg
+          id="prevButton"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M24 0.5C11.0213 0.5 0.5 11.0213 0.5 24C0.5 36.9787 11.0213 47.5 24 47.5C36.9787 47.5 47.5 36.9787 47.5 24C47.5 11.0213 36.9787 0.5 24 0.5Z"
+            stroke="#B7C18F"
+          />
+          <path
+            d="M24 32L25.41 30.59L19.83 25H32V23H19.83L25.41 17.41L24 16L16 24L24 32Z"
+            fill="#B7C18F"
+          />
+        </svg>
+      </div>
+      <div class="swiper-custom-wrapper">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="product-card">
+                <div class="card-image">
+                  <img
+                    src="{% static 'img/products/fruit.png' %}"
+                    alt="Fruit Distillery"
+                  />
+                </div>
+                <div class="card-content text-center">
+                  <h2>Fruit Distillery</h2>
+                  <p>
+                    Discover cutting-edge technologies that drive business
+                    growth in Africa.
+                  </p>
+                </div>
+                <div class="card-action">
+                  <button
+                    id="06-check-product-btn"
+                    type="button"
+                    class="btn btn-light bold"
+                  >
+                    Check product
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-card">
+                <div class="card-image">
+                  <img
+                    src="{% static 'img/products/fruit.png' %}"
+                    alt="Fruit Distillery"
+                  />
+                </div>
+                <div class="card-content text-center">
+                  <h2>Biogas Plant</h2>
+                  <p>
+                    Join our Business Hub Africa and gain a competitive edge.
+                  </p>
+                </div>
+                <div class="card-action">
+                  <button
+                    id="06-check-product-btn"
+                    type="button"
+                    class="btn btn-light bold"
+                  >
+                    Check product
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-card">
+                <div class="card-image">
+                  <img
+                    src="{% static 'img/products/fruit.png' %}"
+                    alt="Fruit Distillery"
+                  />
+                </div>
+                <div class="card-content text-center">
+                  <h2>Oil Pressing Line</h2>
+                  <p>
+                    Empower your business with our advanced technological
+                    offerings.
+                  </p>
+                </div>
+                <div class="card-action">
+                  <button
+                    id="06-check-product-btn"
+                    type="button"
+                    class="btn btn-light bold"
+                  >
+                    Check product
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="product-card">
+                <div class="card-image">
+                  <img
+                    src="{% static 'img/products/fruit.png' %}"
+                    alt="Fruit Distillery"
+                  />
+                </div>
+                <div class="card-content text-center">
+                  <h2>Oil Pressing Line</h2>
+                  <p>
+                    Empower your business with our advanced technological
+                    offerings.
+                  </p>
+                </div>
+                <div class="card-action">
+                  <button
+                    id="06-check-product-btn"
+                    type="button"
+                    class="btn btn-light bold"
+                  >
+                    Check product
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Slider main container -->
+      <div class="right-arrow">
+        <svg
+          id="nextButton"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M24 47.5C11.0213 47.5 0.5 36.9787 0.5 24C0.5 11.0213 11.0213 0.5 24 0.5C36.9787 0.5 47.5 11.0213 47.5 24C47.5 36.9787 36.9787 47.5 24 47.5Z"
+            stroke="#B7C18F"
+          />
+          <path
+            d="M24 16L22.59 17.41L28.17 23H16V25H28.17L22.59 30.59L24 32L32 24L24 16Z"
+            fill="#B7C18F"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="custom-pagination-1 text-center"></div>
+  </div>
+
+  <!-- <div class="d-flex align-items-center 06-Our-products-card-wrappper">
     <div class="left-arrow">
       <svg
         width="48"
@@ -268,7 +428,7 @@
         />
       </svg>
     </div>
-  </div>
+  </div> -->
   <div class="06-Our-products-table">
     {% include "06-Our-products-table.html" %}
   </div>

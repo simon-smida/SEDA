@@ -98,6 +98,17 @@ html, body > * {
     font-weight: bold;
 }
 /* ************ 01-Landing page ************ */
+.water {
+    /* stroke: red; */
+    /* stroke-width: 2; */
+    /* fill: none; */
+}
+.africa-island {
+    stroke: red;
+    stroke-width: 2;
+    fill: none;
+}
+
 /* Navbar styling */
 nav {
     width: 100%;
@@ -122,13 +133,23 @@ nav {
     line-height: 150%;
     font-weight: 700;
 }
+
+[class^="01-subheading"] {
+    padding: 20px;
+}
+
 /* Button */
 #explore-button {
     border-radius: 30px;
     width: 200px;
     padding: 10px 40px;
-    font-weight: bold;
-    font-family: 'Montserrat-Regular', Arial, sans-serif;
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-size: 24px;
+    line-height: 150%;
+    font-weight: 400;
+    position: relative;
+    /* font-weight: 400;
+    font-family: 'Montserrat-Regular', Arial, sans-serif; */
 }
 /* Video background */
 [class^="01-Landing-page"] {
@@ -167,6 +188,7 @@ nav {
 
 [class^="01-text-container"]{
     z-index: 10;
+    max-width: 845px;
 }
 
 /* Container for the text content */
@@ -182,7 +204,30 @@ nav {
     height: 100%;
 }
 
+[class^="01-heading"] h1{
+    font-family: 'Montserrat', sans-serif;
+}
+[class^="01-heading"] h1 span {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+}
 /* ************** 02-About us ************** */
+/* African map */
+.africa-connected-container {
+    padding: 0 30px;
+}
+[class~="02-africa-connected"] {
+    width: 100%;
+    height: auto;
+}
+
+[class~="02-africa-connected"] circle{ 
+    fill: var(--lm-primary-green-normal);
+}
+[class~="02-africa-connected"] path {
+    stroke: var(--lm-primary-green-normal);
+}
+/* Text */
 .tab-horizontal div.line.hidden {
     background-color: transparent;
 }
@@ -204,7 +249,7 @@ nav {
     padding-bottom: 15px;
     margin: 0;
 }
-
+/* Layout */
 .tabs-menu{
     display: flex;
     flex-direction: column;
@@ -280,6 +325,41 @@ section[class^="05-Explore-projects"] h1 {
     padding: 60px;
     text-align: center;
 }
+
+.projects-content {
+    display: none;
+}
+
+.projects-content.active {
+    display: block; /* Show active content */
+    transition: all 0.5s ease;
+}
+
+.project-location {
+    background: var(--lm-primary-green-dark-hover);
+    border-radius: 30px;
+    height: 100%;
+}
+/* .map-wrapper {
+    transition: transform 0.5s ease;
+} */
+[class~="05-projects-map"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: 1s;
+}
+
+/* Map styling */
+[class~="05-projects-map"] svg g:hover path {
+    fill: var(--accent-green-dark);
+}
+/* Color */
+/* .africa-continent {
+    stroke-dasharray: 0 1000;
+    stroke-dashoffset: 1000;
+  } */
 /* ************** 06-Our Products ************** */
 /* ********** Our Products - Headings ********** */
 div[class^="06-Our-products-headings"] {
@@ -321,6 +401,34 @@ div[class^="06-Our-products-headings"] > * {
     fill:black;
 }
 /* ********** Our Products - Cards ********** */
+/* Slider */
+[class~="06-Products-list"] {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+[class~="06-products-slider"] {
+    display: flex;
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+}
+.swiper-custom-wrapper{
+    min-width: 0;
+}
+
+/* pagination */
+.swiper-pagination-bullet {
+    background-color: var(--primary-green-normal);
+    opacity: 100%;
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--lm-accent-green-normal);
+
+}
 /* Container */
 [class*="06-Our-products-card-wrappper"] {
     padding-bottom : 75px;
@@ -336,7 +444,7 @@ div[class^="06-Our-products-headings"] > * {
     align-items: center;
     background-color: white;
     border-radius: 15px;
-    width: 350px;
+    width: 100%;
 }
 
 /* Product filter */
@@ -482,6 +590,46 @@ width: 180px;
     color: var(--secondary-green-dark);
 }
 /* ************** 07-References ************** */
+/* 07-References - Swiper */
+[class~="07-References-slider"] {
+    /* display: flex; */
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+}
+.swiper-custom-wrapper{
+    min-width: 0;
+}
+
+[class~="07-refs-swiper-wrap"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.swiper2 {
+    min-width: 0;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+/* content */
+.swiper-slide {
+    width: 100%;
+    /* overflow: hidden; */
+}
+/* pagination */
+.swiper-pagination-bullet {
+    background-color: var(--primary-green-normal);
+    opacity: 100%;
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--lm-accent-green-normal);
+
+}
+/* 07-References - Layout + padding */
 [class~="07-refs"] p {
     margin: 0;
 }
@@ -508,6 +656,56 @@ width: 180px;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+/* ************** 08-Brands ************** */
+/* 08-Brands-text -> set the same width */
+
+[class~="08-Brands-text"] {
+    padding: 30px 0;
+    color: var(--lm-primary-green-normal);
+    text-align: center;
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+}
+/* 08-Brands-logo -> set the same width */
+.brand-logo {
+    width: 200px; /* Set the desired common width */
+  }
+  
+.svg-logo {
+    width: 100%;  /* Fill the container's width */
+    height: auto; /* Preserve the aspect ratio */
+    display: block;
+  }
+/* 08-Brands-Timeline */
+.brand-timeline { /* svg parent */ 
+    padding: 0 30px;
+}
+
+.brand-item-row {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.svg-timeline-line /* svg line */ {
+    height: 100%; /* SVG will scale to fill the container's height */
+}
+
+.svg-timeline-line line {
+    stroke: var(--lm-primary-green-normal);
+    height: 100%;
+}
+/* 08-Brands-business-casses -> same width */
+.brand-business-cases {
+    min-width: 200px;
+}
+
+div[class*="business-case-"] {
+    padding: 10px 0;
 }
 /* ************** 09-Team ************** */
 /* 09-Team-Layout */

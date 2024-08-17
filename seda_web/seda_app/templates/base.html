@@ -8,8 +8,8 @@
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -17,6 +17,9 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    
   </head>
   <body>
     <main>
@@ -24,7 +27,7 @@
         {% include "01-landing-page.html" %}
       </section>
       <section class="02-About-us">{% include "02-About-us-1.html" %}</section>
-      <section class="03-About-us">{% include "03-About-us-2.html" %}</section>
+      <section class="03-About-us animation-start">{% include "03-About-us-2.html" %}</section>
       <section class="04-Success-drivers">
         {% include "04-Success-drivers.html" %}
       </section>
@@ -60,6 +63,17 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/01-About-us-Animations.js' %}"></script>
+    <script src="{% static 'js/03-About-us-animation.js' %}"></script>
+    <script src="{% static 'js/08-Partners-timeline.js' %}"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="{% static 'js/slider.js' %}"></script>
+    <script src="{% static 'js/08-References.js' %}"></script>
+    <script src="{% static 'js/05-Explore-projects.js' %}"></script>
+
+    
   </body>
 </html>
